@@ -47,14 +47,14 @@ from telethon.tl.types import (
 #---------------------[Start->Variables]----------------
 tehran_tz = pytz.timezone('Asia/Tehran')
 FontTime = [['𝟎', '𝟏', '𝟐', '𝟑', '𝟒', '𝟓', '𝟔', '𝟕', '𝟖', '𝟗']]
-time_on = False
+time_on = True
 commentbot_enabled = False
 comment_text = "کامنت تنظیم نشده"
 profile_folder = "change_profile"
 profile_rotation_enabled = False
 auto_reply_enabled = False
 auto_reply_messages = []
-time_bio_on = True
+time_bio_on = False
 set_bio = ""
 date_format = None
 Timeir = False
