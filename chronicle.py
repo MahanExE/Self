@@ -85,21 +85,21 @@ async def send_messages(event):
 #////////////////////////////////////////////
 
 #--------------[Start->Game-Self]...............
-async def handle_message(event):
+@client.on(events.NewMessage(outgoing=True))
+async def handle_special_message(event):
     if event.message.message == "ساک":
         edits_suck = [
-            "a", "s", "v", "b", "m", "x", "e", "test", "z", "x", "p", "a"
+            "h", "g", "v", "d", "v", 
+            "a", "d", "d", "d", "g", 
+            "s", "a"
         ]
-        delays = [
-            0.3, 0.2, 0.5, 0.1, 0.4, 0.2, 0.6, 0.3, 0.3, 0.5, 1.2, 0.2
-        ]
+        delays = [0.2, 1.0, 0.3, 0.9] * len(edits_suck)  # می‌توانید تأخیرها را به دلخواه تغییر دهید
         try:
             for i in range(len(edits_suck)):
                 await event.edit(edits_suck[i])
                 await asyncio.sleep(delays[i])
         except Exception as e:
             print(f"Error while editing message: {e}")
-
 #--------------[EnD->Game-Self]...............
 
 #////////////////////////////////////////////
