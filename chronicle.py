@@ -101,12 +101,11 @@ async def handle_special_message(event):
         edits_suck = [
             "a", "s","v","b","m","x","e","test","z","x","p", "a"
         ]
-        try:
-            for edit in edits_suck:
-                await event.edit(edit)
-                await asyncio.sleep(0.2) 
-        except Exception as e:
-            print(f"Error while editing message: {e}")
+        delays = [0.3, 0.2, 0.5, 0.1, 0.4, 0.2, 0.6, 0.3, 0.3, 0.5, 1.2]  # به ترتیب
+
+for edit, delay in zip(edits_suck, delays):
+    await event.edit(edit)
+    await asyncio.sleep(delay)
 
 #--------------[EnD->Game-Self]...............
 
