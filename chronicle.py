@@ -87,11 +87,13 @@ async def send_messages(event):
 #--------------[Start->Game-Self]...............
 @client.on(events.NewMessage(outgoing=True))
 async def handle_special_message(event):
-    if event.message.message == "ساک":
+    if event.message.message == "Get Dns":
         edits_suck = [
-            "h", "g", "v", "d", "v", 
-            "a", "d", "ن", "d", "g", 
-            "s", "a"
+            "Wating For Dns Cofing . . .", "Wating For Dns Cofing .", "Wating For Dns Cofing . .", "Wating For Dns Cofing . . .", "Wating For Dns Cofing .", 
+            "Wating For Dns Cofing . .", "Wating For Dns Cofing . . .", "Wating For Dns Cofing .", "successful✅...", "Getting Information... 0%\n[░░░░░░░░░░░░░░░░░░░░]", 
+            "Getting Information.. 11.07%\n[██░░░░░░░░░░░░░░░░░░]", "Getting Information. 20.63%\n[███░░░░░░░░░░░░░░░░░]", "Getting Information... 34.42%\n[█████░░░░░░░░░░░░░░░]", "Getting Information.. 42.17%\n[███████░░░░░░░░░░░░░]", "Getting Information. 55.30%\n[█████████░░░░░░░░░░░]",
+            "Getting Information... 64.86%\n[███████████░░░░░░░░░]", "Getting Information.. 74.02%\n[█████████████░░░░░░░]", "Getting Information. 86.21%\n[███████████████░░░░░]", "Getting Information... 93.50%\n[█████████████████░░░]", "Getting Information.. 100%\n[████████████████████]",
+            "Pinging. . .✔️", "test",
         ]
         delays = [0.2, 1.0, 0.3, 0.9] * len(edits_suck)  # می‌توانید تأخیرها را به دلخواه تغییر دهید
         try:
