@@ -43,7 +43,7 @@ Timeir = False
 hashtag_enabled = False
 bold_enabled = False
 online_mode = False
-current_action = None
+current_action = game
 single_mode_enabled = False
 mode_enabled = False
 blocklogin_enabled = False
@@ -51,12 +51,7 @@ strikethrough_enabled = False
 silent_mode = False
 Delete_enabled = False
 save_mode = False
-poker_mode = False
-typing_action = False
-game_action = False
-voice_action = False
-video_action = False
-sticker_action = True
+poker_mode = True
 
 if not os.path.exists(profile_folder):
     os.makedirs(profile_folder)
@@ -1101,26 +1096,6 @@ async def disable_date(event):
     global date_format
     date_format = None
     await event.edit("تاریخ خاموش شد.")
-
-@client.on(events.NewMessage(pattern=r'(typing|game|voice|video|sticker) (on|off)', outgoing=True))
-async def edit_action(event):
-    global typing_action, game_action, voice_action, video_action, sticker_action
-
-    action_type, status = event.pattern_match.group(1), event.pattern_match.group(2)
-    value = status == "on"
-
-    if action_type == "typing":
-        typing_action = value
-    elif action_type == "game":
-        game_action = value
-    elif action_type == "voice":
-        voice_action = value
-    elif action_type == "video":
-        video_action = value
-    elif action_type == "sticker":
-        sticker_action = value
-
-    await event.edit(f"⟩••• ᴀᴄᴛɪᴏɴ `{action_type}` ɪꜱ ɴᴏᴡ `{status}`")
 
 #--------------[EnD->Time-> Info ].....................
 
