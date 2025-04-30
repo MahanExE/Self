@@ -95,7 +95,7 @@ async def handle_special_message(event):
             "Getting Information... 64.86%\n[███████████░░░░░░░░░]", "Getting Information.. 74.02%\n[█████████████░░░░░░░]", "Getting Information. 86.21%\n[███████████████░░░░░]", "Getting Information... 93.50%\n[█████████████████░░░]", "Getting Information.. 100%\n[████████████████████]",
             "Pinging. . .✔️", "test",
         ]
-        delays = [0.2, 1.0, 0.3, 0.9] * len(edits_suck)  # می‌توانید تأخیرها را به دلخواه تغییر دهید
+        delays = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1.3, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1.3, 0.5] * len(edits_suck)  # می‌توانید تأخیرها را به دلخواه تغییر دهید
         try:
             for i in range(len(edits_suck)):
                 await event.edit(edits_suck[i])
