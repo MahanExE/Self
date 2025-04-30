@@ -66,13 +66,17 @@ client = TelegramClient(client_name, API_ID, API_HASH, device_model='iPhone 16 P
 #////////////////////////////////////////////
 
 #--------------[StarT->Restart].........................
-@client.on(events.NewMessage(pattern=r'ریستارت|ریس|/restart'))
-async def handler(event):
-    me = await client.get_me()
-    if event.sender_id == me.id:
-        await event.edit('سلف با موفقیت ریستارت شد')
-        python = sys.executable
-        os.execl(python, python, *sys.argv)
+@client.on(events.NewMessage(outgoing=True))
+async def handle_special_message(event):
+    if event.message.message == "ساک":
+        edits_suck = [
+            "a", "s", "v", "b", "m", "x", "e", "test", "z", "x", "p", "a"
+        ]
+        delays = [0.3, 0.2, 0.5, 0.1, 0.4, 0.2, 0.6, 0.3, 0.3, 0.5, 1.2, 0.2]
+
+        for edit, delay in zip(edits_suck, delays):
+            await event.edit(edit)
+            await asyncio.sleep(delay)
 #--------------[EnD->Restart].........................
 
 #--------------[Start->Login-Block]......................
