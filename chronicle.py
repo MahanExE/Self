@@ -85,7 +85,8 @@ async def send_messages(event):
 #////////////////////////////////////////////
 
 #--------------[Start->Game-Self]...............
-if event.message.message == "ساک":
+async def handle_message(event):
+    if event.message.message == "ساک":
         edits_suck = [
             "a", "s", "v", "b", "m", "x", "e", "test", "z", "x", "p", "a"
         ]
