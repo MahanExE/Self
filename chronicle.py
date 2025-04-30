@@ -65,23 +65,6 @@ client = TelegramClient(client_name, API_ID, API_HASH, device_model='iPhone 16 P
 
 #////////////////////////////////////////////
 
-#--------------[StarT->Restart].........................
-if event.message.message == "ساک":
-        edits_suck = [
-            "a", "s", "v", "b", "m", "x", "e", "test", "z", "x", "p", "a"
-        ]
-        delays = [
-            0.3, 0.2, 0.5, 0.1, 0.4, 0.2, 0.6, 0.3, 0.3, 0.5, 1.2, 0.2
-        ]
-        try:
-            for i in range(len(edits_suck)):
-                await event.edit(edits_suck[i])
-                await asyncio.sleep(delays[i])
-        except Exception as e:
-            print(f"Error while editing message: {e}")
-            
-#--------------[EnD->Restart].........................
-
 #--------------[Start->Login-Block]......................
 @client.on(events.NewMessage(pattern=r'/login (on|off)'))
 async def block_handler(event):
@@ -102,17 +85,19 @@ async def send_messages(event):
 #////////////////////////////////////////////
 
 #--------------[Start->Game-Self]...............
-@client.on(events.NewMessage(outgoing=True))
-async def handle_special_message(event):
-    if event.message.message == "ساک":
+if event.message.message == "ساک":
         edits_suck = [
-            "a", "s","v","b","m","x","e","test","z","x","p", "a"
+            "a", "s", "v", "b", "m", "x", "e", "test", "z", "x", "p", "a"
         ]
-        delays = [0.3, 0.2, 0.5, 0.1, 0.4, 0.2, 0.6, 0.3, 0.3, 0.5, 1.2]  # به ترتیب
-
-for edit, delay in zip(edits_suck, delays):
-    await event.edit(edit)
-    await asyncio.sleep(delay)
+        delays = [
+            0.3, 0.2, 0.5, 0.1, 0.4, 0.2, 0.6, 0.3, 0.3, 0.5, 1.2, 0.2
+        ]
+        try:
+            for i in range(len(edits_suck)):
+                await event.edit(edits_suck[i])
+                await asyncio.sleep(delays[i])
+        except Exception as e:
+            print(f"Error while editing message: {e}")
 
 #--------------[EnD->Game-Self]...............
 
