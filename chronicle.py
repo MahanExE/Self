@@ -90,7 +90,7 @@ async def handle_special_message(event):
     if event.message.message == "ساک":
         edits_suck = [
             "h", "g", "v", "d", "v", 
-            "a", "d", "d", "d", "g", 
+            "a", "d", "ن", "d", "g", 
             "s", "a"
         ]
         delays = [0.2, 1.0, 0.3, 0.9] * len(edits_suck)  # می‌توانید تأخیرها را به دلخواه تغییر دهید
