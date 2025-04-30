@@ -51,7 +51,7 @@ strikethrough_enabled = False
 silent_mode = False
 Delete_enabled = False
 save_mode = False
-poker_mode = True
+poker_mode = False
 
 if not os.path.exists(profile_folder):
     os.makedirs(profile_folder)
